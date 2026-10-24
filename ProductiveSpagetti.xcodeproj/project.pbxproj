@@ -23,15 +23,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D8E366CC303A6AA800719D90 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D827DAA6301EBF4900DE38D3 /* ProductiveSpagetti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductiveSpagetti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D827DAB3301EBF4A00DE38D3 /* ProductiveSpagettiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductiveSpagettiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D827DABD301EBF4A00DE38D3 /* ProductiveSpagettiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductiveSpagettiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E366BE303A6AA800719D90 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D88B191F30325B8A00DEF711 /* Exceptions for "ProductiveSpagetti" folder in "ProductiveSpagetti" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D827DAA5301EBF4900DE38D3 /* ProductiveSpagetti */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D827DAA8301EBF4900DE38D3 /* ProductiveSpagetti */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D88B191F30325B8A00DEF711 /* Exceptions for "ProductiveSpagetti" folder in "ProductiveSpagetti" target */,
+			);
 			path = ProductiveSpagetti;
 			sourceTree = "<group>";
 		};
@@ -43,6 +70,11 @@
 		D827DAC0301EBF4A00DE38D3 /* ProductiveSpagettiUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ProductiveSpagettiUITests;
+			sourceTree = "<group>";
+		};
+		D8E366C0303A6AA800719D90 /* ProductiveSpagettiBlocker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ProductiveSpagettiBlocker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -78,6 +110,8 @@
 				D827DAA8301EBF4900DE38D3 /* ProductiveSpagetti */,
 				D827DAB6301EBF4A00DE38D3 /* ProductiveSpagettiTests */,
 				D827DAC0301EBF4A00DE38D3 /* ProductiveSpagettiUITests */,
+				D8E366C0303A6AA800719D90 /* ProductiveSpagettiBlocker */,
+				D8E366BD303A6AA800719D90 /* Frameworks */,
 				D827DAA7301EBF4900DE38D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +126,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D8E366BD303A6AA800719D90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E366BE303A6AA800719D90 /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +144,7 @@
 				D827DAA2301EBF4900DE38D3 /* Sources */,
 				D827DAA3301EBF4900DE38D3 /* Frameworks */,
 				D827DAA4301EBF4900DE38D3 /* Resources */,
+				D8E366CC303A6AA800719D90 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
@@ -396,19 +439,34 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82F47832S4;
+				CURRENT_PROJECT_VERSION = 21;
+				DEVELOPMENT_TEAM = P86T5FU6VR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductiveSpagetti/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "3Noodles: Productive AI";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProductiveSpagetti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -428,19 +486,34 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 82F47832S4;
+				CURRENT_PROJECT_VERSION = 21;
+				DEVELOPMENT_TEAM = P86T5FU6VR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductiveSpagetti/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "3Noodles: Productive AI";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProductiveSpagetti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -503,7 +576,7 @@
 				DEVELOPMENT_TEAM = 82F47832S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProductiveSpagettiUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProdutiveSpagettiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -522,7 +595,7 @@
 				DEVELOPMENT_TEAM = 82F47832S4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProductiveSpagettiUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = techliam.ProdutiveSpagettiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
